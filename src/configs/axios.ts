@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 import { getValue, removeValue } from '@/utils/application';
 
 export const API = axios.create({
-    baseURL: '',
+    baseURL: import.meta.env.VITE_APP_API_ENDPOINT as string,
 });
 
 API.interceptors.response.use(
