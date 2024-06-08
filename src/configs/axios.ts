@@ -45,7 +45,7 @@ API.interceptors.request.use(
         const token = getValue('token');
         config.headers.Authorization = `Bearer ${token}`;
         config.headers = {
-            mode: 'no-cors',
+            mode: 'cors',
             ...config.headers,
         } as unknown as AxiosHeaders;
 

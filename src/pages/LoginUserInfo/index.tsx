@@ -16,7 +16,7 @@ const LoginUserInfo = () => {
     const { loading, value } = useAsync(async () => {
         try {
             const { data }: { data: BaseResponseDto<PersonInformation> } = await executeGetWithPagination(
-                `/info`,
+                `api/Auth/info`,
             );
             return data.data;
         } catch (error) {
